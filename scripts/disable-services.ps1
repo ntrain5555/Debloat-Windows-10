@@ -14,10 +14,10 @@ $services = @(
     "SharedAccess"                             # Internet Connection Sharing (ICS)
     "TrkWks"                                   # Distributed Link Tracking Client
     "WbioSrvc"                                 # Windows Biometric Service (required for Fingerprint reader / facial detection)
-    #"WlanSvc"                                 # WLAN AutoConfig (Disabling this can cause issues with wifi connectivity)
+    "WlanSvc"                                 # WLAN AutoConfig (Disabling this can cause issues with wifi connectivity)
     "WMPNetworkSvc"                            # Windows Media Player Network Sharing Service
-    #"wscsvc"                                  # Windows Security Center Service
-    #"WSearch"                                 # Windows Search
+    "wscsvc"                                  # Windows Security Center Service
+    "WSearch"                                 # Windows Search
     "XblAuthManager"                           # Xbox Live Auth Manager
     "XblGameSave"                              # Xbox Live Game Save Service
     "XboxNetApiSvc"                            # Xbox Live Networking Service
@@ -29,4 +29,5 @@ $services = @(
 foreach ($service in $services) {
     Write-Output "Trying to disable $service"
     Get-Service -Name $service | Set-Service -StartupType Disabled
+	Get-Service -Name $service | Stop-Service
 }

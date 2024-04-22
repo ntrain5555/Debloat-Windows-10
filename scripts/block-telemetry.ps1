@@ -30,11 +30,11 @@ $domains = @(
     "a-0007.a-msedge.net"
     "a-0008.a-msedge.net"
     "a-0009.a-msedge.net"
-    "a1621.g.akamai.net"
-    "a1856.g2.akamai.net"
-    "a1961.g.akamai.net"
+    # "a1621.g.akamai.net"
+    # "a1856.g2.akamai.net"
+    # "a1961.g.akamai.net"
     #"a248.e.akamai.net"            # makes iTunes download button disappear (#43)
-    "a978.i6g1.akamai.net"
+    # "a978.i6g1.akamai.net"
     "a.ads1.msn.com"
     "a.ads2.msads.net"
     "a.ads2.msn.com"
@@ -155,9 +155,9 @@ $domains = @(
     "e3843.g.akamaiedge.net"
     "flightingserviceweurope.cloudapp.net"
     #"sls.update.microsoft.com"                 # may cause issues with Windows Updates
-    "static.ads-twitter.com"                    # may cause issues with Twitter login
+    # "static.ads-twitter.com"                    # may cause issues with Twitter login
     "www-google-analytics.l.google.com"
-    "p.static.ads-twitter.com"                  # may cause issues with Twitter login
+    # "p.static.ads-twitter.com"                  # may cause issues with Twitter login
     "hubspot.net.edge.net"
     "e9483.a.akamaiedge.net"
 

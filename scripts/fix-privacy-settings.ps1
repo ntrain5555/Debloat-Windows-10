@@ -14,15 +14,19 @@ Set-WindowsSearchSetting -EnableWebResultsSetting $false
 Write-Output "Set general privacy options"
 # "Let websites provide locally relevant content by accessing my language list"
 Set-ItemProperty -Path "HKCU:\Control Panel\International\User Profile" "HttpAcceptLanguageOptOut" 1
+
 # Locaton aware printing (changes default based on connected network)
 New-FolderForced -Path "HKCU:\Printers\Defaults"
 Set-ItemProperty -Path "HKCU:\Printers\Defaults" "NetID" "{00000000-0000-0000-0000-000000000000}"
+
 # "Send Microsoft info about how I write to help us improve typing and writing in the future"
 New-FolderForced -Path "HKCU:\SOFTWARE\Microsoft\Input\TIPC"
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Input\TIPC" "Enabled" 0
+
 # "Let apps use my advertising ID for experiencess across apps"
 New-FolderForced -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo"
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AdvertisingInfo" "Enabled" 0
+
 # "Turn on SmartScreen Filter to check web content"
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppHost" "EnableWebContentEvaluation" 0
 
